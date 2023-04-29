@@ -1,0 +1,42 @@
+TwoSum
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.
+
+Solution:
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        # initializing values of variables used within the function
+        i=0 # index variable
+        j=0 # index variable
+        flag = False # flag variable to break multiple loops - initialized to False
+        # done initializing
+        # using while loop to only let the function run for values of indeces less than the length of the list input
+        while i < len(nums) and j < len(nums):
+            for i in range(0,len(nums)): # i values range from 0 to length of list
+                for j in range(i,len(nums)-1): # j values vary from i to 1 less than the list size - because we use j+1 in the loop
+                        add = nums[i]+nums[j+1]
+                        if add == target: # if the condition is met
+                            flag = True # change flag variable to true
+                            a=nums[i]  # assigning the selected/identified numbers to variables
+                            b=nums[j+1] 
+                            break
+                if flag == True: # breaking out of multiple loops using flag variable
+                        break
+            if flag == True:
+                break
+        return [i, j+1] # returning the indeces of the list
+                    
+                
+                                  
+                          
+                            
+                        
+                
+                
+        
+        
+        

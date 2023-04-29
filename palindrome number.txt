@@ -1,0 +1,17 @@
+iven an integer x, return true if x is palindrome integer.
+
+An integer is a palindrome when it reads the same backward as forward.
+
+For example, 121 is a palindrome while 123 is not.
+ 
+
+
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        string1 = str(x) # converting to string
+        # reversing the order
+        string2 = string1[ : :-1] # string[start index: end index: -1] '-1' means start from back
+        if string1 == string2:
+            return True
+        else:
+            return False
